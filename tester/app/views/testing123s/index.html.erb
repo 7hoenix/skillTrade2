@@ -1,0 +1,23 @@
+<h1>Listing testing123s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testing123s.each do |testing123| %>
+      <tr>
+        <td><%= link_to 'Show', testing123 %></td>
+        <td><%= link_to 'Edit', edit_testing123_path(testing123) %></td>
+        <td><%= link_to 'Destroy', testing123, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testing123', new_testing123_path %>
